@@ -17,7 +17,7 @@
     border: 1px solid rgb(34, 63, 31);
     background-color: floralwhite;
 
-    margin-top: 0px;
+    margin-top: 20px;
     margin-right: 5px;
     margin-bottom: 5px;
     margin-left: 0px;
@@ -30,7 +30,7 @@
 
 .creatures li .description {
     font-size: .7em;
-    line-height: 10px;
+    line-height: 12px;
 }
 
 .image-container {
@@ -39,5 +39,6 @@
 
 .image-container img {
     height: 100%;
+    width: 100%; 
     object-fit: contain;
 }

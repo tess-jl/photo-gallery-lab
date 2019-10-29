@@ -31,7 +31,7 @@ nav, main {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background: rgb(162, 206, 204);
     border-bottom: 2px solid rgb(18, 37, 23);
     width: 100%
@@ -55,4 +55,5 @@ section {
 #logo {
     height:60px;
     width: 60px;
+    margin-right: 10px;
 }
