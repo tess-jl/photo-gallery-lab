@@ -15,7 +15,8 @@
     min-width: 200px;
 
     border: 1px solid rgb(34, 63, 31);
-    background-color: floralwhite;
+    background-color: rgb(238, 226, 201);
+    border-radius: 10px;
 
     margin-top: 20px;
     margin-right: 5px;
