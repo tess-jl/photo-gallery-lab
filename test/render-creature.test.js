@@ -15,7 +15,6 @@ test('renders html from data', assert => {
         horns: 1
     };
 
-
     const expected = /*html*/`
     <li class="creature-item">
         <div class="info-container">
@@ -31,7 +30,7 @@ test('renders html from data', assert => {
     `;
 
     // act
-    const html = renderCreatureItem();
+    const html = renderCreatureItem(creature);
     
     // assert
     assert.htmlEqual(html, expected);
