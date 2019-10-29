@@ -2,18 +2,41 @@ import renderCreatureItem from './render-creature-item.js';
 import htmlToDOM from '../util/html-to-DOM.js';
 import images from '../data/images.js';
 
-//reference the target parent element
 const creatureItemListDOM = document.querySelector('.creatures');
-
-//call forEach on the array of images, passing a callback function 
-// for each image, Convert image object to html using template
-// Convert html to DOM using htmlToDOM
-// Append to list parent (<ul>)
-
-images.forEach(creature => {
-    const html = renderCreatureItem(creature);
-    const convertedToDOM = htmlToDOM(html);
+const creatureTypeFilter = document.querySelector('.creature-type-filter');
 
 
-    creatureItemListDOM.appendChild(convertedToDOM);
+function render(images) {
+    // remove any existing list items
+    while (creatureItemListDOM.lastElementChild) {
+        creatureItemListDOM.lastElementChild.remove();
+    }
+
+    // render new list items
+    images.forEach(creature => {
+        const html = renderCreatureItem(creature);
+        const convertedToDOM = htmlToDOM(html);
+        creatureItemListDOM.appendChild(convertedToDOM);
+    });
+    
+}
+
+
+render(images);
+
+creatureTypeFilter.addEventListener('change', () => {
+
+    const filter = creatureTypeFilter.value;
+    let filteredCreatures = null;
+
+    if (!filter) {
+        filteredCreatures = images;
+    }
+    else {
+        filteredCreatures = images.filter(creature => {
+            return creature.keyword === filter;
+        });
+    }
+
+    render(filteredCreatures);
 });

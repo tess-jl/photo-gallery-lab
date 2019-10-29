@@ -9,7 +9,7 @@ test('renders html from data', assert => {
     // arrange
     const creature = {
         url: 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
-        title: 'UniWhal',
+        title: 'Uniwhal',
         description: 'A unicorn and a narwhal nuzzling their horns',
         keyword: 'narwhal',
         horns: 1
@@ -18,7 +18,7 @@ test('renders html from data', assert => {
     const expected = /*html*/`
     <li class="creature-item">
         <div class="info-container">
-                <h2>UniWhal</h2>
+                <h2>Uniwhal</h2>
                 <p class="creature-type">narwhal</p>
         </div>
         <div class="image-container">
