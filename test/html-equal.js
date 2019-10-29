@@ -16,3 +16,5 @@ QUnit.assert.htmlEqual = function(actual, expected) {
     const normalizedExpected = normalize(expected);
     QUnit.assert.equal(normalizedActual, normalizedExpected);
 };
+
+
